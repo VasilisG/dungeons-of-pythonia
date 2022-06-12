@@ -55,7 +55,7 @@ const QUESTIONS = [
         ]
     },
     {
-        'question': 'How do you create a dictionary withe a key of "k" and a value\nof 10?',
+        'question': 'How do you create a dictionary with a key of "k" and a value\nof 10?',
         'answers': [
             {
                 'answer': 'd={"k" : 10}',
