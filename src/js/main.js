@@ -386,8 +386,7 @@ function Player(){
         }
         if(!isDownPressed && !isUpPressed && !isLeftPressed && !isRightPressed){
             this.speed = 0;
-            this.pSprite.body.velocity.x = 0;
-            this.pSprite.body.velocity.y = 0;
+            halt();
         }
 
         this.pSprite.body.velocity.x = (-isLeftPressed + isRightPressed) * PLAYER_SPEED;
@@ -407,6 +406,11 @@ function Player(){
         if(this.pSprite.y > GAME_HEIGHT - 10 - this.pSprite.height){
             this.pSprite.y = GAME_HEIGHT - 10 - this.pSprite.height;
         }
+    }
+
+    this.halt = function(){
+        this.pSprite.body.velocity.x = 0;
+        this.pSprite.body.velocity.y = 0;
     }
 
     this.update = function(){
