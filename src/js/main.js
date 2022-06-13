@@ -89,7 +89,7 @@ const QUESTIONS = [
         ]
     },
     {
-        'question': 'How can we loop from 1 to 10 incrementing by 2 each time?',
+        'question': 'How can we loop from 1 to 10 with a steo of 2?',
         'answers': [
             {
                 'answer': 'for(i=1; i<10; i+=2)',
