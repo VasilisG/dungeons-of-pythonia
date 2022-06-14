@@ -386,7 +386,7 @@ function Player(){
         }
         if(!isDownPressed && !isUpPressed && !isLeftPressed && !isRightPressed){
             this.speed = 0;
-            halt();
+            this.halt();
         }
 
         this.pSprite.body.velocity.x = (-isLeftPressed + isRightPressed) * PLAYER_SPEED;
