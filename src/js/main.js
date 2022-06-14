@@ -599,8 +599,7 @@ let questionPopup;
 let intro = {
 
     preload: function(){
-        game.load.image('tiles', 'assets/images/tilesets/tileset_dungeon.png');
-        game.load.audio('buttonHover', 'assets/sounds/buttonHover.ogg');
+        preloadLevelAssets();
     },
 
     create: function(){
@@ -616,15 +615,14 @@ let intro = {
 let gameOver = {
     
     preload: function(){
-        game.load.image('tiles', 'assets/images/tilesets/tileset_dungeon.png');
-        game.load.audio('buttonHover', 'assets/sounds/buttonHover.ogg');
+        preloadLevelAssets();
     },
 
     create: function(){
         centerGameInWindow();
         createMap(true);
-        buttonHoverSound = game.add.audio('buttonHover');
         createOutro(UI_GAME_OVER, UI_GAME_OVER_INFO);
+        buttonHoverSound = game.add.audio('buttonHover');
     },
 
     update: function(){}
@@ -633,15 +631,14 @@ let gameOver = {
 let victory = {
     
     preload: function(){
-        game.load.image('tiles', 'assets/images/tilesets/tileset_dungeon.png');
-        game.load.audio('buttonHover', 'assets/sounds/buttonHover.ogg'); 
+        preloadLevelAssets();
     },
 
     create: function(){
         centerGameInWindow();
         createMap(true);
-        buttonHoverSound = game.add.audio('buttonHover');
         createOutro(UI_VICTORY, UI_VICTORY_INFO);
+        buttonHoverSound = game.add.audio('buttonHover');
     },
 
     update: function(){}
@@ -681,6 +678,7 @@ function preloadLevelAssets(){
 }
 
 function preloadSprites(){
+    game.load.image('tiles', 'assets/images/tilesets/tileset_dungeon.png');
     game.load.image('background', 'assets/images/sprites/background.png');
     game.load.image('orb_blue', 'assets/images/sprites/orb_blue.png');
     game.load.image('orb_green', 'assets/images/sprites/orb_green.png');
@@ -700,6 +698,7 @@ function preloadAudio(){
     game.load.audio('fireball', 'assets/sounds/fireball.ogg');
     game.load.audio('playerHurt', 'assets/sounds/playerHurt.ogg');
     game.load.audio('openQuestion', 'assets/sounds/openQuestion.ogg');
+    game.load.audio('buttonHover', 'assets/sounds/buttonHover.ogg');
 }
 
 function createLevel(question, nextLevel, level_boulders, level_enemies, level_positions, levelText){
