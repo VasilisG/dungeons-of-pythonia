@@ -388,9 +388,6 @@ function Player(){
             this.speed = 0;
             this.halt();
         }
-        if(isPopupShown){
-            this.halt();
-        }
 
         this.pSprite.body.velocity.x = (-isLeftPressed + isRightPressed) * PLAYER_SPEED;
         this.pSprite.body.velocity.y = (-isUpPressed + isDownPressed) * PLAYER_SPEED;
@@ -721,6 +718,7 @@ function updateLevel(){
             questionPopup.create();
             openQuestionSound.play();
             isPopupShown = true;
+            player.getSprite().destroy();
         }
     }
     else {
