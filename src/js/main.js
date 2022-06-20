@@ -718,6 +718,7 @@ function updateLevel(){
             questionPopup.create();
             openQuestionSound.play();
             isPopupShown = true;
+            player.halt();
         }
     }
     else {
