@@ -684,7 +684,7 @@ function preloadSprites(){
     game.load.image('orb_green', 'assets/images/sprites/orb_green.png');
     game.load.image('orb_orange', 'assets/images/sprites/orb_orange.png');
     game.load.image('boulder', 'assets/images/sprites/boulder.png');
-    game.load.spritesheet('player', 'assets/images/sprites/player.png', 32, 48, 12);
+    game.load.spritesheet('player', 'assets/images/sprites/player.png', 32, 49, 12);
     game.load.spritesheet('heart', 'assets/images/sprites/heart.png', 17, 17, 5);
     game.load.spritesheet('fireball', 'assets/images/sprites/fireball.png', 32, 32, 2);
     game.load.spritesheet('enemy', 'assets/images/sprites/enemy.png', 56, 71, 4);
